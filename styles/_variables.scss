@@ -1,0 +1,119 @@
+@use "sass:math";
+
+// Colors
+$color-cyan-600: oklch(0.6335 0.078 216.93);
+$color-cyan-300: oklch(0.8699 0.0869 216.28);
+$color-purple-600: oklch(0.5599 0.1283 303.94);
+$color-purple-300: oklch(0.8353 0.103175 305.4983);
+$color-slate-900: oklch(0.2868 0.0382 283.73);
+$color-slate-600: oklch(0.6309 0.0328 285.42);
+$color-slate-300: oklch(0.8649 0.0192 285.99);
+$color-white: oklch(0.9851 0 0);
+
+// Base
+$base-font: 16px;
+$font-family: "Red Hat Display", sans-serif;
+$leading: 1.1;
+$background-color: $color-white;
+
+// Spacing
+$spacing-50: math.div(4px, $base-font) * 1rem;
+$spacing-100: math.div(8px, $base-font) * 1rem;
+$spacing-200: math.div(16px, $base-font) * 1rem;
+$spacing-300: math.div(24px, $base-font) * 1rem;
+$spacing-400: math.div(32px, $base-font) * 1rem;
+$spacing-500: math.div(40px, $base-font) * 1rem;
+$spacing-700: math.div(56px, $base-font) * 1rem;
+$spacing-800: math.div(64px, $base-font) * 1rem;
+$spacing-900: math.div(72px, $base-font) * 1rem;
+$spacing-1000: math.div(80px, $base-font) * 1rem;
+$spacing-1400: math.div(112px, $base-font) * 1rem;
+
+:root {
+  --color-cyan-600: #{$color-cyan-600};
+  --color-cyan-300: #{$color-cyan-300};
+  --color-purple-600: #{$color-purple-600};
+  --color-purple-300: #{$color-purple-300};
+  --color-slate-900: #{$color-slate-900};
+  --color-slate-600: #{$color-slate-600};
+  --color-slate-300: #{$color-slate-300};
+  --color-white: #{$color-white};
+  --spacing-50: #{$spacing-50};
+  --spacing-100: #{$spacing-100};
+  --spacing-200: #{$spacing-200};
+  --spacing-300: #{$spacing-300};
+  --spacing-400: #{$spacing-400};
+  --spacing-500: #{$spacing-500};
+  --spacing-700: #{$spacing-700};
+  --spacing-800: #{$spacing-800};
+  --spacing-900: #{$spacing-900};
+  --spacing-1000: #{$spacing-1000};
+  --spacing-1400: #{$spacing-1400};
+}
+
+// Typography
+@mixin text-preset-1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+
+  @media (min-width: 48rem) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: 64rem) {
+    font-size: 4rem;
+  }
+}
+
+@mixin text-preset-2 {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.1;
+
+  @media (min-width: 48rem) {
+    font-size: 2.25rem;
+  }
+}
+
+@mixin text-preset-3 {
+  font-size: .75rem;
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: .25rem;
+  text-transform: uppercase;
+
+  @media (min-width: 48rem) {
+    font-size: 0.875rem;
+  }
+}
+
+@mixin text-preset-4 {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+
+  @media (min-width: 64rem) {
+    font-size: 1.125rem;
+  }
+}
+
+@mixin text-preset-5 {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+// Markup
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-col-center($x) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: #{$x};
+}

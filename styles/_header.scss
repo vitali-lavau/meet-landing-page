@@ -1,0 +1,13 @@
+@use "variables" as *;
+
+.header {
+  padding: 3rem 0 $spacing-400;
+
+  &__inner {
+    @include flex-center;
+  }
+
+  @media (min-width: 48rem) {
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,104 @@
+@use "variables" as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  &__img {
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__inner {
+    @include flex-center;
+  }
+
+  &__block {
+    @include flex-col-center($spacing-300);
+    text-align: center;
+  }
+
+  &__title {
+    @include text-preset-1;
+    color: $color-slate-900
+  }
+
+  &__text {
+    @include text-preset-4;
+    color: $color-slate-600;
+  }
+
+  &__actions {
+    @include flex-col-center($spacing-200);
+  }
+  
+  @media (min-width: 48rem) {
+    gap: 4.5rem;
+
+    &__title {
+      max-width: 50%;
+    }
+
+    &__text{
+      max-width: 60%;
+    }
+
+    &__actions {
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &__title {
+      max-width: 55%;
+    }
+
+    &__img {
+      display: none;
+    }
+
+    &__block {
+      gap: $spacing-400;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -32px;
+      width: 28%;
+      height: 68%;
+      transform: translateY(-50%);
+      background-image: url("../img/desktop/image-hero-left.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left center;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -32px;
+      width: 28%;
+      height: 68%;
+      transform: translateY(-50%);
+      background-image: url("../img/desktop/image-hero-right.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right center;
+      z-index: -1;
+    }
+  }
+}

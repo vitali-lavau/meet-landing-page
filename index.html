@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <title>Frontend Mentor | Meet landing page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="#" class="logo">
+        <img src="./img/logo.svg" alt="Meet">
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <section class="hero section">
+    <picture class="hero__img">
+      <source srcset="./img/tablet/image-hero.png" media="(min-width: 48rem)">
+      <img src="./img/mobile/people-mobile.png" alt="People">
+    </picture>
+
+
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__block">
+          <h1 class="hero__title">Group Chat for Everyone</h1>
+          <p class="hero__text">Meet makes it easy to connect with others face-to-face virtually and
+            collaborate across any device.</p>
+
+          <div class="hero__actions">
+            <button class="hero__btn btn">Download <span>v1.3</span></button>
+            <button class="hero__btn btn btn--purple">What is it?</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about section">
+    <div class="container">
+      <div class="about__inner">
+        <div class="about__number number">
+          <div class="number__item">
+            <span>01</span>
+          </div>
+        </div>
+
+        <div class="about__list">
+          <div class="about__item">
+            <picture class="about__img">
+              <source srcset="./img/desktop/image-woman-in-videocall.jpg" media="(min-width: 64rem)">
+              <img src="./img/mobile/about-img-mobile-1.jpg" alt="Woman in video call">
+            </picture>
+          </div>
+          <div class="about__item">
+            <picture class="about__img">
+              <source srcset="./img/desktop/image-women-videochatting.jpg" media="(min-width: 64rem)">
+              <img src="./img/mobile/about-img-mobile-2.jpg" alt="Women video chatting">
+            </picture>
+          </div>
+          <div class="about__item">
+            <picture class="about__img">
+              <source srcset="./img/desktop/image-men-in-meeting.jpg" media="(min-width: 64rem)">
+              <img src="./img/mobile/about-img-mobile-3.jpg" alt="Men in meeting">
+            </picture>
+          </div>
+          <div class="about__item">
+            <picture class="about__img">
+              <source srcset="./img/desktop/image-man-texting.jpg" media="(min-width: 64rem)">
+              <img src="./img/mobile/about-img-mobile-4.jpg" alt="Man texting">
+            </picture>
+          </div>
+        </div>
+
+        <div class="about__info">
+          <div class="about__info-head">
+            <p class="about__subtitle">Built for modern use</p>
+            <h2 class="about__title">Smarter meetings, all in one place</h2>
+          </div>
+
+          <p class="about__text">Send messages, share files, show your screen, and record your meetings — all in one
+            workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__number number">
+        <div class="number__item">
+          <span>02</span>
+        </div>
+      </div>
+
+      <div class="footer__block">
+        <div class="container">
+          <div class="footer__content">
+            <h2 class="footer__title">Experience more together</h2>
+            <p class="footer__text">Stay connected with reliable HD meetings <br> and unlimited one-on-one and group video
+              sessions.</p>
+            <button class="btn btn--purple">Download <span>v1.3</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+</body>
+</html>
